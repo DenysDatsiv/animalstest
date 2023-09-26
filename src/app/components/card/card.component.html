@@ -1,0 +1,10 @@
+<div class="card">
+  <img [src]="animal.photo" alt="Animal Photo">
+  <div class="card-body">
+    <h2 class="card-title">{{ animal.name }}</h2>
+    <p class="card-text">Breed: {{ animal.breed }}</p>
+    <p class="card-text">Age: {{ animal.age }}</p>
+    <p class="card-text">Gender: {{ animal.gender }}</p>
+  </div>
+  <button class="more-btn" (click)="onMoreClick()">More</button>
+</div>

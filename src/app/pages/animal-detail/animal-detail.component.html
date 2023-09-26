@@ -1,0 +1,18 @@
+<a (click)="goBack()" class="back-button">Back</a>
+
+<div class="animal-card">
+  <div class="card-image">
+    <img alt="{{animal.name}}" src="{{animal.photo}}">
+    <img alt="{{animal.name}}" src="{{animal.photoadditional}}">
+  </div>
+  <div class="card-content">
+    <h2 class="card-title">{{ animal.name }}</h2>
+    <p class="card-detail">Breed: {{ animal.breed }}</p>
+    <p class="card-detail">Age: {{ animal.age }}</p>
+    <p class="card-detail">Gender: {{ animal.gender }}</p>
+    <p class="card-detail">Medical Note: {{animal.medicalNote}}</p>
+    <p class="card-detail">Vaccination: {{animal.vaccination ? "Exist" : "Needed"}}</p>
+    <p class="card-detail">Description: {{animal.description}}</p>
+    <button *ngIf="!animalAdopted" class="adopt-button" (click)="adoptAnimal()">Adopt me!</button>
+  </div>
+</div>

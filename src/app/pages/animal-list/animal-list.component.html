@@ -1,0 +1,20 @@
+<div class="container">
+  <button (click)="toggleFilter()" class="filter-btn">Toggle Filter</button>
+</div>
+
+<app-animal-filter (filterApplied)="onFilterApplied($event)"></app-animal-filter>
+
+<div *ngIf="paginatedAnimals.length === 0" class="no-results-message">
+  No results found. 😔
+</div>
+
+<div class="card-block">
+  <div *ngFor="let animal of paginatedAnimals; let i = index" class="card-block-item">
+    <app-card (moreClicked)="goToAnimalDetail($event)" [animal]="animal" [index]="i" [type]="animal.type"></app-card>
+  </div>
+</div>
+
+<div *ngIf="paginatedAnimals.length >= pageSize" class="pagination">
+  <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1" class="navigation-btn">Previous</button>
+  <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages" class="navigation-btn">Next</button>
+</div>

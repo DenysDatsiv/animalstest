@@ -1,0 +1,28 @@
+.page-not-found-main-block {
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-header {
+  font-size: 90px;
+}
+
+.subtext {
+  font-size: 20px;
+  margin: 40px;
+}
+
+.redirect-to-main-page-btn {
+  padding: 15px 30px;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: #2F88FF;
+  background-color: #2F88FF;
+  text-decoration: none;
+}
