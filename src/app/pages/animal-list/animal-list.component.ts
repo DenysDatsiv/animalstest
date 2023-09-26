@@ -71,7 +71,6 @@ export class AnimalListComponent implements OnInit {
     }
   }
 
-
   get totalPages() {
     return Math.ceil(this.filteredAnimals.length / this.pageSize);
   }

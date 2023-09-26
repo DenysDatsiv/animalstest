@@ -1,6 +1,7 @@
 <div class="overlay" *ngIf="showFilter">
   <div class="filter-popup">
     <div class="popup-content">
+
       <h2 class="filtration-header">Filter</h2>
       <input class="searching-input" [(ngModel)]="filterValue" placeholder="Type name or breed" />
       <div>
@@ -28,20 +29,21 @@
           <input type="radio" [(ngModel)]="selectedGender" name="animalGender" value="all">
           <label>All</label>
         </div>
-        <div class="radio-btn-choice">
-          <input type="radio" [(ngModel)]="selectedGender" name="animalGender" value="Male">
-          <label>Male</label>
-        </div>
-        <div class="radio-btn-choice">
-          <input type="radio" [(ngModel)]="selectedGender" name="animalGender" value="Female">
-          <label>Female</label>
-        </div>
+          <div class="radio-btn-choice">
+            <input [(ngModel)]="selectedGender" name="animalGender" type="radio" value="Male">
+            <label>Male</label>
+          </div>
+          <div class="radio-btn-choice">
+            <input [(ngModel)]="selectedGender" name="animalGender" type="radio" value="Female">
+            <label>Female</label>
+          </div>
         </div>
       </div>
-<div class="filter-control">
-  <button  (click)="applyFilter()">Apply</button>
-  <button  (click)="toggleFilter()">Close</button>
-</div>
+
+      <div class="filter-control">
+        <button (click)="applyFilter()">Apply</button>
+        <button (click)="toggleFilter()">Close</button>
+      </div>
 
     </div>
   </div>
