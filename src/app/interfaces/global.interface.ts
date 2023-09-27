@@ -1,7 +1,7 @@
 export interface Animal {
   name: string;
   photo: string;
-  photoadditional: string;
+  photoadditional?: string;
   age: number;
   medicalNote: string;
   vaccination: boolean;
