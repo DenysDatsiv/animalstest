@@ -11,7 +11,7 @@ import {Animal, FilterOptions} from "../../interfaces/global.interface";
 })
 export class AnimalListComponent implements OnInit {
   animals: Animal[];
-  filteredAnimals: Animal[]; // Add a property for filtered animals
+  filteredAnimals: Animal[];
   filterOptions = {
     value: '',
     type: 'all',
@@ -28,7 +28,7 @@ export class AnimalListComponent implements OnInit {
     this.animalService.getAnimalsWithGender().subscribe(
       (animals) => {
         this.animals = animals;
-        this.filterAnimals(); // Apply initial filter
+        this.filterAnimals();
       },
       (error) => {
         console.error('Error fetching animals:', error);
