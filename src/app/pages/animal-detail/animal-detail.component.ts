@@ -26,11 +26,7 @@ export class AnimalDetailComponent implements OnInit {
 
     this.animalService.getAnimalByIndex(index).subscribe(
       (animal) => {
-        if (animal && 'error' in animal) {
-          console.error('Error fetching animal details:', animal.error);
-        } else {
-          this.animal = animal as Animal;
-        }
+        this.animal = animal as Animal;
       },
       (error) => {
         console.error('Error fetching animal details:', error);
